@@ -8,10 +8,10 @@ import Stack from '@mui/material/Stack';
 import { Button, Typography, IconButton } from '@mui/material';
 import PlayArrowRoundedIcon from '@mui/icons-material/PlayArrowRounded';
 import Process from './components/Process';
+import AboutUs from './components/AboutUs';
 export default function HomePage() {
   return (
     <Box sx={{ backgroundColor: '#ECF9FF' }}>
-      <Navbar></Navbar>
       <Box sx={{ my: 1 }}>
         <Stack
           direction="row"
@@ -41,6 +41,7 @@ export default function HomePage() {
         </Stack>
       </Box>
       <Process></Process>
+      <AboutUs></AboutUs>
     </Box>
   );
 }

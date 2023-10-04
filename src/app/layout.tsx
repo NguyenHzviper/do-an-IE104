@@ -2,6 +2,7 @@
 import { Manrope } from 'next/font/google'
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './components/ThemeRegistry/theme';
+import Navbar from './components/Navbar';
 const manrope = Manrope({
   subsets: ['latin'],
   display: 'swap',
@@ -20,6 +21,7 @@ export default function RootLayout({
     <html lang="en" className={manrope.className}>
       <body>
         <ThemeProvider theme={theme}>
+          <Navbar></Navbar>
           {children}
         </ThemeProvider>
       </body>
