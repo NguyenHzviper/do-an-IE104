@@ -1,3 +1,4 @@
+'use client'
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Navbar from './components/Navbar';
@@ -9,6 +10,10 @@ import { Button, Typography, IconButton } from '@mui/material';
 import PlayArrowRoundedIcon from '@mui/icons-material/PlayArrowRounded';
 import Process from './components/Process';
 import AboutUs from './components/AboutUs';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import MyCarousel from './components/MyCarousel';
+
+
 export default function HomePage() {
   return (
     <Box sx={{ backgroundColor: '#ECF9FF' }}>
@@ -42,6 +47,7 @@ export default function HomePage() {
       </Box>
       <Process></Process>
       <AboutUs></AboutUs>
+      <MyCarousel></MyCarousel>
     </Box>
   );
 }

@@ -5,12 +5,12 @@ import Image, { StaticImageData } from 'next/image';
 import pic from '../../../image/image 56.png'
 import shieldicon from '../../../image/shield 1.svg'
 import ratingicon from '../../../image/rating 1.svg'
-
+import group13 from '../../../image/Group 13.svg'
 type Props = {}
 
 const AboutUs = (props: Props) => {
     return (
-        <Box sx={{ backgroundColor: 'white', p: 10 }}>
+        <Box sx={{ backgroundColor: 'white', p: 10, position: 'relative' }}>
             <Grid container spacing={4}>
                 <Grid xs={12} md={6}>
                     <Typography variant='h3' gutterBottom sx={{}}>About us</Typography>
@@ -61,6 +61,7 @@ const AboutUs = (props: Props) => {
                 </Grid>
                 <Grid md={6} sx={{ display: { xs: 'none', md: 'block' } }}>
                     <Image src={pic} alt='About us' width={570} height={500} style={{ borderRadius: '10%', }} />
+                    <Image src={group13} alt='Chart' width={500} height={300} style={{ borderRadius: '10px', position: 'absolute', top: '55%', left: '35%' }} />
                 </Grid>
             </Grid>
         </Box>
