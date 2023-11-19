@@ -6,7 +6,7 @@ type Props = {
 
 const CustomCardCaroucel = (props: Props) => {
     return (
-        <Card sx={{ maxWidth: 370, maxHeight: 436, borderRadius: "10px" }}>
+        <Card sx={{ maxWidth: 370, borderRadius: "10px" }}>
             <Box sx={{ m: 2 }}>
                 <CardMedia
                     sx={{ borderRadius: 2 }}
