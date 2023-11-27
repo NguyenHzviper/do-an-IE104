@@ -10,7 +10,7 @@ type Props = {}
 
 const AboutUs = (props: Props) => {
     return (
-        <Box sx={{ backgroundColor: 'white', p: 10, position: 'relative' }}>
+        <Box id="about" sx={{ backgroundColor: 'white', p: 10, position: 'relative' }}>
             <Grid container spacing={4}>
                 <Grid xs={12} md={6}>
                     <Typography variant='h3' gutterBottom sx={{}}>About us</Typography>

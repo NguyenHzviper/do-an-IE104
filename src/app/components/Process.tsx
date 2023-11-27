@@ -12,7 +12,7 @@ type Props = {}
 
 const Process = (props: Props) => {
     return (
-        <Box sx={{ backgroundColor: 'white', p: 10 }}>
+        <Box id="start" sx={{ backgroundColor: 'white', p: 10 }}>
             <Grid container spacing={4}>
                 <Grid xs={12}>
                     <Typography variant='h3' gutterBottom sx={{ textAlign: 'center' }}>How it works</Typography>

@@ -12,7 +12,7 @@ export default class MyCarousel extends Component<Props, State> {
 
     render() {
         return (
-            <Box sx={{ p: 10 }}>
+            <Box id="services" sx={{ p: 10 }}>
                 <Typography variant='h3' gutterBottom sx={{ textAlign: 'start', pb: 10 }}>Popular packages</Typography>
                 <Carousel autoPlay centerMode centerSlidePercentage={30} swipeable infiniteLoop emulateTouch showArrows={false} showStatus={false} showIndicators={false} showThumbs={false}>
                     <div>

@@ -26,6 +26,7 @@ const CustomCardCaroucel = (props: Props) => {
                     alignItems="center"
                     spacing={2}
                 >
+
                     <AvatarGroup max={3} sx={{ float: 'left' }}>
                         <Avatar alt="Remy Sharp" src="https://mui.com/static/images/avatar/1.jpg" />
                         <Avatar alt="Travis Howard" src="https://mui.com/static/images/avatar/2.jpg" />
@@ -33,6 +34,8 @@ const CustomCardCaroucel = (props: Props) => {
                         {/* <Avatar alt="Agnes Walker" src="https://mui.com/static/images/avatar/4.jpg" />
                     <Avatar alt="Trevor Henderson" src="https://mui.com/static/images/avatar/5.jpg" /> */}
                     </AvatarGroup>
+
+
                     <Typography sx={{ float: 'right', textAlign: "center", color: "#00E5CC", fontWeight: "bold" }} variant="body2" >100$</Typography>
 
                 </Stack>

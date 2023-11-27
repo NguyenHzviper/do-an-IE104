@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -9,6 +10,15 @@ type Props = {}
 const pages = ['Home', 'About', 'Services', 'Reviews', 'Support'];
 
 const Navbar = (props: Props) => {
+
+    function scrollToSection(id: string) {
+        var section = document.getElementById(id.toLocaleLowerCase());
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+
     return (
         <AppBar position='static' color='default' sx={{ py: 2, color: 'white' }}>
             <Container maxWidth="xl">
@@ -20,7 +30,7 @@ const Navbar = (props: Props) => {
                         {pages.map((page) => (
                             <Button
                                 key={page}
-                                // onClick={() => { }}
+                                onClick={() => scrollToSection(page)}
                                 sx={{ px: '12.5px', color: page === 'Home' ? '#00E5CC' : '#828297', display: 'block', fontSize: '14px' }}
                             >
                                 {page}
