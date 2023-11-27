@@ -45,7 +45,10 @@ export default function HomePage() {
     });
   };
 
-  window.addEventListener('scroll', toggleVisible);
+  if (typeof window !== "undefined") {
+    window.addEventListener('scroll', toggleVisible);
+  }
+
 
   return (
     <Box sx={{ backgroundColor: '#ECF9FF' }}>
