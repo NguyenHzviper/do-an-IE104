@@ -13,8 +13,12 @@ import vec6 from '../../image/global promotion/Vector 6.png'
 import vec32 from '../../image/global promotion/Group 32.png'
 import mespic from '../../image/global promotion/mespic.png'
 import ongco from '../../image/ông cố ơi.png'
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Stack from '@mui/material/Stack';
-import { Button, Typography, IconButton, Paper, TextField } from '@mui/material';
+import { Button, Typography, IconButton, Paper, TextField, Grid } from '@mui/material';
 import PlayArrowRoundedIcon from '@mui/icons-material/PlayArrowRounded';
 import Process from './components/Process';
 import AboutUs from './components/AboutUs';
@@ -137,7 +141,59 @@ export default function HomePage() {
           <Image src={ongco} alt='Ảnh bìa' width={353}
             height={436} style={{ position: 'absolute', top: "0%", left: "60%" }} />
         </Paper>
+        <Paper square sx={{ p: 10 }}>
+          <Grid container spacing={3}>
+            <Grid item xs={3}>
+              <Typography variant='h3' sx={{ textAlign: 'start' }}>Nhóm 1</Typography>
+              <Typography variant='body2' sx={{ textAlign: "start", my: 2 }}>This is a big one and i consider it one of <br></br> the most important things for a business.</Typography>
+              <IconButton>
+                <FacebookIcon />
+              </IconButton>
+              <IconButton>
+                <InstagramIcon />
+              </IconButton>
+              <IconButton>
+                <TwitterIcon />
+              </IconButton>
+              <IconButton>
+                <LinkedInIcon />
+              </IconButton>
+            </Grid>
+            <Grid item xs={3}>
+              <Typography variant='h5' sx={{ textAlign: 'start' }}>Quick Links</Typography>
+              <Typography variant='body2' sx={{ textAlign: "start", my: 2 }}>Home</Typography>
+              <Typography variant='body2' sx={{ textAlign: "start", my: 2 }}>About</Typography>
+              <Typography variant='body2' sx={{ textAlign: "start", my: 2 }}>Appointment</Typography>
+              <Typography variant='body2' sx={{ textAlign: "start", my: 2 }}>Blog</Typography>
+              <Typography variant='body2' sx={{ textAlign: "start", my: 2 }}>Contact</Typography>
+            </Grid>
+            <Grid item xs={3}>
+              <Typography variant='h5' sx={{ textAlign: 'start' }}>Company</Typography>
+              <Typography variant='body2' sx={{ textAlign: "start", my: 2 }}>About</Typography>
+              <Typography variant='body2' sx={{ textAlign: "start", my: 2 }}>Contact</Typography>
+              <Typography variant='body2' sx={{ textAlign: "start", my: 2 }}>Careers</Typography>
+              <Typography variant='body2' sx={{ textAlign: "start", my: 2 }}>Press</Typography>
+            </Grid>
+            <Grid item xs={3}>
+              <Typography variant='h5' sx={{ textAlign: 'start' }}>Information</Typography>
+              <Typography variant='body2' sx={{ textAlign: "start", my: 2 }}>Privacy Policy</Typography>
+              <Typography variant='body2' sx={{ textAlign: "start", my: 2 }}>Terms & Condition</Typography>
+              <Typography variant='body2' sx={{ textAlign: "start", my: 2 }}>FAQ</Typography>
+            </Grid>
+          </Grid>
+        </Paper>
+        <Box sx={{ backgroundColor: "#000020", py: 2, px: 10 }}>
+          <Stack
+            direction="row"
+            justifyContent="space-between"
+            alignItems="center"
+            spacing={2}
+          >
+            <Typography variant='body2' sx={{ color: 'white' }}>© 2023 Group 1. All rights reserved.</Typography>
+            <Typography variant='body2' sx={{ color: 'white' }}>Designed by Group 1</Typography>
+          </Stack>
 
+        </Box>
         <IconButton onClick={scrollToTop} id='scrollToTopBtn' size='large' sx={{ backgroundColor: "green", position: "fixed", top: "80%", left: "93%", display: visible ? '' : 'none' }} aria-label="scroll to top">
           <ArrowUpwardIcon />
         </IconButton>
