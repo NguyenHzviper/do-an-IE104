@@ -6,13 +6,14 @@ import CustomCard from './CustomCard';
 import packageicon from '../../../image/package.png'
 import charticon from '../../../image/chart.png'
 import calendericon from '../../../image/calender.png'
+import { Paper } from '@mui/material';
 type Props = {}
 
 
 
 const Process = (props: Props) => {
     return (
-        <Box id="start" sx={{ backgroundColor: 'white', p: 10 }}>
+        <Paper square id="start" sx={{ p: 10 }}>
             <Grid container spacing={4}>
                 <Grid xs={12}>
                     <Typography variant='h3' gutterBottom sx={{ textAlign: 'center' }}>How it works</Typography>
@@ -29,7 +30,7 @@ const Process = (props: Props) => {
 can be highly beneficial.'></CustomCard>
                 </Grid>
             </Grid>
-        </Box>
+        </Paper>
     )
 }
 

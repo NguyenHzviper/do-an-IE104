@@ -1,7 +1,8 @@
 // 'use client'
 import { Manrope } from 'next/font/google'
-import Navbar from './components/Navbar';
+
 import ThemeRegistry from './components/ThemeRegistry/ThemeRegistry';
+
 const manrope = Manrope({
   subsets: ['latin'],
   display: 'swap',
@@ -16,14 +17,19 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
   return (
+
     <html lang="en" className={manrope.className}>
       <body>
+
         <ThemeRegistry>
-          <Navbar></Navbar>
+
           {children}
         </ThemeRegistry>
+
       </body>
     </html>
+
   )
 }

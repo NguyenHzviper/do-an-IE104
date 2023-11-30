@@ -1,6 +1,6 @@
 import React from 'react'
 import Grid from '@mui/material/Unstable_Grid2';
-import { Stack, Typography, Box } from '@mui/material';
+import { Stack, Typography, Box, Paper } from '@mui/material';
 import Image, { StaticImageData } from 'next/image';
 import pic from '../../../image/image 56.png'
 import shieldicon from '../../../image/shield 1.svg'
@@ -10,7 +10,7 @@ type Props = {}
 
 const AboutUs = (props: Props) => {
     return (
-        <Box id="about" sx={{ backgroundColor: 'white', p: 10, position: 'relative' }}>
+        <Paper square id="about" sx={{ p: 10, position: 'relative' }}>
             <Grid container spacing={4}>
                 <Grid xs={12} md={6}>
                     <Typography variant='h3' gutterBottom sx={{}}>About us</Typography>
@@ -64,7 +64,7 @@ const AboutUs = (props: Props) => {
                     <Image src={group13} alt='Chart' width={500} height={300} style={{ borderRadius: '10px', position: 'absolute', top: '55%', left: '35%' }} />
                 </Grid>
             </Grid>
-        </Box>
+        </Paper>
     )
 }
 
