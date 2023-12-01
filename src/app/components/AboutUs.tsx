@@ -10,12 +10,11 @@ type Props = {}
 
 const AboutUs = (props: Props) => {
     return (
-        <Paper square id="about" sx={{ p: 10, position: 'relative' }}>
+        <Paper square id="giới thiệu" sx={{ p: 10, position: 'relative' }}>
             <Grid container spacing={4}>
                 <Grid xs={12} md={6}>
-                    <Typography variant='h3' gutterBottom sx={{}}>About us</Typography>
-                    <Typography variant='body2' sx={{ pb: 3 }}>No wonder that promotion strategy is one of the most <br /> important processes in marketing.
-                        In fact, it supports your marketing voices to reach your <br /> target audience, creates interest, and helps you to engage with them.</Typography>
+                    <Typography variant='h3' gutterBottom sx={{}}>Về chúng tôi</Typography>
+                    <Typography variant='body2' sx={{ pb: 3 }}>Không có gì ngạc nhiên khi chiến lược quảng bá là một trong những quy trình quan trọng nhất trong marketing. <br /> Trên thực tế, nó hỗ trợ giọng điệu tiếp thị của bạn để tiếp cận đối tượng khách hàng, tạo ra sự quan tâm và giúp bạn tương tác với họ.</Typography>
                     <Box sx={{ pt: 3 }}>
                         <Stack
                             direction="row"
@@ -31,8 +30,8 @@ const AboutUs = (props: Props) => {
                                 alignItems="flex-start"
                                 spacing={1}
                             >
-                                <Typography variant='h5' sx={{}}>Safe and secured</Typography>
-                                <Typography variant='body2' sx={{}}>Safe and secured promotion strategy is one of the <br /> most important processes in marketing.
+                                <Typography variant='h5' sx={{}}>An toàn và bảo mật</Typography>
+                                <Typography variant='body2' sx={{}}>Chiến lược quảng bá an toàn và bảo mật là một trong những quy trình quan trọng nhất trong lĩnh vực tiếp thị.
                                 </Typography>
                             </Stack>
                         </Stack>
@@ -51,8 +50,8 @@ const AboutUs = (props: Props) => {
                                 alignItems="flex-start"
                                 spacing={1}
                             >
-                                <Typography variant='h5' sx={{}}>Highly expert team</Typography>
-                                <Typography variant='body2' sx={{}}>We supports your marketing voices to reach your <br /> target audience, creates interest.
+                                <Typography variant='h5' sx={{}}>Đội ngũ chuyên gia cao cấp</Typography>
+                                <Typography variant='body2' sx={{}}>Chúng tôi hỗ trợ cách tiếp thị của bạn <br /> để tiếp cận đối tượng khách hàng, tạo ra sự quan tâm.
                                 </Typography>
                             </Stack>
                         </Stack>

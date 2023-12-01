@@ -2,6 +2,7 @@ import React from 'react'
 import { Avatar, AvatarGroup, Box, Stack, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material'
 type Props = {
     title: string,
+    price: number,
 }
 
 const CustomCardCaroucel = (props: Props) => {
@@ -36,7 +37,7 @@ const CustomCardCaroucel = (props: Props) => {
                     </AvatarGroup>
 
 
-                    <Typography sx={{ float: 'right', textAlign: "center", color: "#00E5CC", fontWeight: "bold" }} variant="body2" >100$</Typography>
+                    <Typography sx={{ float: 'right', textAlign: "center", color: "#00E5CC", fontWeight: "bold" }} variant="body2" >{props.price}$</Typography>
 
                 </Stack>
 

@@ -12,25 +12,20 @@ export default class MyCarousel extends Component<Props, State> {
 
     render() {
         return (
-            <Box id="services" sx={{ p: 10 }}>
-                <Typography variant='h3' gutterBottom sx={{ textAlign: 'start', pb: 10 }}>Popular packages</Typography>
+            <Box id="dịch vụ" sx={{ p: 10 }}>
+                <Typography variant='h3' gutterBottom sx={{ textAlign: 'start', pb: 10 }}>Gói dịch vụ phổ biến</Typography>
                 <Carousel autoPlay centerMode centerSlidePercentage={30} swipeable infiniteLoop emulateTouch showArrows={false} showStatus={false} showIndicators={false} showThumbs={false}>
                     <div>
-                        <CustomCardCaroucel title='The basic package to start your promotion' />
+                        <CustomCardCaroucel title='Gói cơ bản để bắt đầu chiến dịch quảng bá của bạn' price={100} />
                     </div>
                     <div>
-                        <CustomCardCaroucel title='The standard package to 
-grow your business' />
+                        <CustomCardCaroucel title='Gói tiêu chuẩn để phát triển doanh nghiệp của bạn' price={150} />
                     </div>
                     <div>
-                        <CustomCardCaroucel title='The premium package to 
-boost your promotion' />
+                        <CustomCardCaroucel title='Gói cao cấp để đẩy mạnh chiến dịch quảng bá của bạn' price={200} />
                     </div>
                     <div>
-                        <CustomCardCaroucel title='The single package to start your promotion' />
-                    </div>
-                    <div>
-                        <CustomCardCaroucel title='The single package to start your promotion' />
+                        <CustomCardCaroucel title='Gói duy nhất để bắt đầu chiến dịch quảng bá của bạn' price={300} />
                     </div>
                 </Carousel>
             </Box>

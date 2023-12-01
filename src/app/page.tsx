@@ -1,7 +1,7 @@
 'use client'
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import Navbar from './components/Navbar';
+import Navbar from './components/nav_bar';
 import Image from 'next/image';
 import anhbia from '../../image/hero main component.png'
 import messpic from '../../image/message.png'
@@ -30,10 +30,13 @@ import { ThemeProvider } from '@mui/material/styles';
 import { selectTheme } from '@/app/redux/themeSlice';
 import { useSelector } from 'react-redux';
 import { lightModeTheme, darkModeTheme } from './components/ThemeRegistry/theme';
+import LoginDialog from './components/login_dialog';
 
 
 export default function HomePage() {
   const [visible, setVisible] = useState(false)
+
+
 
   function scrollToSection(id: string) {
     var section = document.getElementById(id.toLocaleLowerCase());
@@ -84,11 +87,11 @@ export default function HomePage() {
               alignItems="flex-start"
               spacing={4}
             >
-              <Typography variant='h3'>Perfect place for yout bussiness promotion</Typography>
-              <Typography variant='body1'>Businesses generally promote their brand, products, and services by identifying audience.</Typography>
+              <Typography variant='h3'>Địa điểm hoàn hảo cho việc quảng bá kinh doanh của bạn</Typography>
+              <Typography variant='body1'>Các doanh nghiệp thông thường quảng bá thương hiệu, sản phẩm và dịch vụ của họ bằng cách xác định đối tượng khách hàng.</Typography>
               <Box>
 
-                <Button onClick={() => scrollToSection('start')} variant='contained' sx={{ color: 'white', px: '30px', py: '20px', backgroundColor: '#060640' }}>Get started</Button>
+                <Button onClick={() => scrollToSection('start')} variant='contained' sx={{ color: 'white', px: '30px', py: '20px', backgroundColor: '#060640' }}>Bắt đầu</Button>
                 <IconButton sx={{ mx: 5, backgroundColor: "#00E5CC" }} aria-label="play" size="large">
                   <PlayArrowRoundedIcon fontSize="inherit" />
                 </IconButton>
@@ -109,8 +112,8 @@ export default function HomePage() {
             alignItems="center"
             spacing={2}
           >
-            <Typography variant='h3' sx={{ textAlign: 'center' }}>Global  promotion</Typography>
-            <Typography variant='body2' sx={{ textAlign: 'center', pb: 3 }}>Businesses generally promote their brand, products, and services by identifying audience. No wonder <br></br> that promotion strategy is one of the most important processes in marketing.</Typography>
+            <Typography variant='h3' sx={{ textAlign: 'center' }}>Quảng bá toàn cầu</Typography>
+            <Typography variant='body2' sx={{ textAlign: 'center', pb: 3 }}>Doanh nghiệp thông thường quảng bá thương hiệu, sản phẩm và dịch vụ của họ bằng cách xác định đối tượng khách hàng. <br /> Không có gì ngạc nhiên khi chiến lược quảng bá là một trong những quy trình quan trọng nhất trong lĩnh vực tiếp thị.</Typography>
             <Box sx={{ position: "relative" }}>
               <Image src={globalpic} alt='Ảnh bìa' width={1000}
                 height={500} />
@@ -132,10 +135,10 @@ export default function HomePage() {
         <Paper square sx={{ p: 10, position: 'relative' }}>
 
           <Box sx={{ backgroundColor: "#ECFDFF", p: 10, }}>
-            <Typography variant='h3' sx={{ textAlign: 'start' }}>Subscribe newsletter</Typography>
-            <Typography variant='body2' sx={{ textAlign: 'start', py: 1 }}>Businesses generally promote their brand, products, and services by identifying audience.<br></br> No wonder that promotion strategy is one of the most important processes in marketing.</Typography>
-            <TextField id="outlined-basic" margin='normal' sx={{ width: '500px' }} label="Enter email address" variant="outlined" />
-            <Button variant='contained' sx={{ color: 'white', px: '20px', py: '16px', backgroundColor: '#060640', ml: 2, mt: 1.9 }}>Subscribe</Button>
+            <Typography variant='h3' sx={{ textAlign: 'start' }}>Đăng ký nhận bản tin</Typography>
+            <Typography variant='body2' sx={{ textAlign: 'start', py: 1 }}>Đăng ký để nhận được thông báo và những ưu đãi mới nhất từ chúng tôi</Typography>
+            <TextField id="outlined-basic" margin='normal' sx={{ width: '500px' }} label="Email" variant="outlined" />
+            <Button variant='contained' sx={{ color: 'white', px: '20px', py: '16px', backgroundColor: '#060640', ml: 2, mt: 1.9 }}>Đăng ký</Button>
 
           </Box>
           <Image src={ongco} alt='Ảnh bìa' width={353}
@@ -145,7 +148,7 @@ export default function HomePage() {
           <Grid container spacing={3}>
             <Grid item xs={3}>
               <Typography variant='h3' sx={{ textAlign: 'start' }}>Nhóm 1</Typography>
-              <Typography variant='body2' sx={{ textAlign: "start", my: 2 }}>This is a big one and i consider it one of <br></br> the most important things for a business.</Typography>
+              <Typography variant='body2' sx={{ textAlign: "start", my: 2 }}>Điều này là một vấn đề quan trọng và theo tôi, <br />nó được xem là một trong những điều quan trọng nhất đối với một doanh nghiệp.</Typography>
               <IconButton>
                 <FacebookIcon />
               </IconButton>
@@ -160,25 +163,25 @@ export default function HomePage() {
               </IconButton>
             </Grid>
             <Grid item xs={3}>
-              <Typography variant='h5' sx={{ textAlign: 'start' }}>Quick Links</Typography>
-              <Typography variant='body2' sx={{ textAlign: "start", my: 2 }}>Home</Typography>
-              <Typography variant='body2' sx={{ textAlign: "start", my: 2 }}>About</Typography>
-              <Typography variant='body2' sx={{ textAlign: "start", my: 2 }}>Appointment</Typography>
+              <Typography variant='h5' sx={{ textAlign: 'start' }}>Liên kết nhanh</Typography>
+              <Typography variant='body2' sx={{ textAlign: "start", my: 2 }}>Trang chủ</Typography>
+              <Typography variant='body2' sx={{ textAlign: "start", my: 2 }}>Giới thiệu</Typography>
+              <Typography variant='body2' sx={{ textAlign: "start", my: 2 }}>Lịch hẹn</Typography>
               <Typography variant='body2' sx={{ textAlign: "start", my: 2 }}>Blog</Typography>
-              <Typography variant='body2' sx={{ textAlign: "start", my: 2 }}>Contact</Typography>
+              <Typography variant='body2' sx={{ textAlign: "start", my: 2 }}>Liên hệ</Typography>
             </Grid>
             <Grid item xs={3}>
-              <Typography variant='h5' sx={{ textAlign: 'start' }}>Company</Typography>
-              <Typography variant='body2' sx={{ textAlign: "start", my: 2 }}>About</Typography>
-              <Typography variant='body2' sx={{ textAlign: "start", my: 2 }}>Contact</Typography>
-              <Typography variant='body2' sx={{ textAlign: "start", my: 2 }}>Careers</Typography>
-              <Typography variant='body2' sx={{ textAlign: "start", my: 2 }}>Press</Typography>
+              <Typography variant='h5' sx={{ textAlign: 'start' }}>Công ty</Typography>
+              <Typography variant='body2' sx={{ textAlign: "start", my: 2 }}>Giới thiệu công ty</Typography>
+              <Typography variant='body2' sx={{ textAlign: "start", my: 2 }}>Liên hệ</Typography>
+              <Typography variant='body2' sx={{ textAlign: "start", my: 2 }}>Công việc</Typography>
+              <Typography variant='body2' sx={{ textAlign: "start", my: 2 }}>Báo chí</Typography>
             </Grid>
             <Grid item xs={3}>
-              <Typography variant='h5' sx={{ textAlign: 'start' }}>Information</Typography>
-              <Typography variant='body2' sx={{ textAlign: "start", my: 2 }}>Privacy Policy</Typography>
-              <Typography variant='body2' sx={{ textAlign: "start", my: 2 }}>Terms & Condition</Typography>
-              <Typography variant='body2' sx={{ textAlign: "start", my: 2 }}>FAQ</Typography>
+              <Typography variant='h5' sx={{ textAlign: 'start' }}>Thông tin</Typography>
+              <Typography variant='body2' sx={{ textAlign: "start", my: 2 }}>Chính sách bảo mật</Typography>
+              <Typography variant='body2' sx={{ textAlign: "start", my: 2 }}>Điều khoản và Điều kiện</Typography>
+              <Typography variant='body2' sx={{ textAlign: "start", my: 2 }}>Câu hỏi thường gặp (FAQ)</Typography>
             </Grid>
           </Grid>
         </Paper>
@@ -190,7 +193,7 @@ export default function HomePage() {
             spacing={2}
           >
             <Typography variant='body2' sx={{ color: 'white' }}>© 2023 Group 1. All rights reserved.</Typography>
-            <Typography variant='body2' sx={{ color: 'white' }}>Designed by Group 1</Typography>
+            <Typography variant='body2' sx={{ color: 'white' }}>Thiết kế bởi Nhóm 1</Typography>
           </Stack>
 
         </Box>
@@ -198,6 +201,7 @@ export default function HomePage() {
           <ArrowUpwardIcon />
         </IconButton>
       </Box>
+
     </ThemeProvider>
   );
 }

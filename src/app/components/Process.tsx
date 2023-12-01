@@ -16,18 +16,17 @@ const Process = (props: Props) => {
         <Paper square id="start" sx={{ p: 10 }}>
             <Grid container spacing={4}>
                 <Grid xs={12}>
-                    <Typography variant='h3' gutterBottom sx={{ textAlign: 'center' }}>How it works</Typography>
-                    <Typography variant='body2' sx={{ textAlign: 'center', pb: 3 }}>Businesses generally promote their brand, products, and <br /> services by identifying audience.</Typography>
+                    <Typography variant='h3' gutterBottom sx={{ textAlign: 'center' }}>Làm thế nào nó hoạt động ?</Typography>
+                    <Typography variant='body2' sx={{ textAlign: 'center', pb: 3 }}>Các doanh nghiệp thông thường quảng bá thương hiệu, sản phẩm <br /> và dịch vụ của họ bằng cách xác định đối tượng khách hàng.</Typography>
                 </Grid>
                 <Grid xs={12} md={4}>
-                    <CustomCard title='Choose packages' image={packageicon} content='Businesses thrive by targeting and tailoring promotions through extensive research and consumer insights.'></CustomCard>
+                    <CustomCard title='Chọn gói dịch vụ' image={packageicon} content='Các doanh nghiệp phát triển bằng cách nhắm đến và điều chỉnh các chiến dịch quảng bá thông qua nghiên cứu mở rộ và hiểu biết về người tiêu dùng.'></CustomCard>
                 </Grid>
                 <Grid xs={12} md={4}>
-                    <CustomCard title='Schedule appointment' image={calendericon} content='When you have important information to pass onto your people, text messaging can be a great way to do it.'></CustomCard>
+                    <CustomCard title='Lên lịch hẹn' image={calendericon} content='Khi bạn có thông tin quan trọng cần truyền đạt cho nhóm của mình, việc sử dụng tin nhắn văn bản có thể là một cách tuyệt vời để thực hiện điều này.'></CustomCard>
                 </Grid>
                 <Grid xs={12} md={4}>
-                    <CustomCard title='Grow together' image={charticon} content='Texting can sometimes come across as an impersonal way to communicate, it 
-can be highly beneficial.'></CustomCard>
+                    <CustomCard title='Phát triển cùng nhau' image={charticon} content='Việc sử dụng tin nhắn văn bản đôi khi có thể tạo ra ấn tượng không chân thành trong giao tiếp, nhưng nó cũng có thể mang lại nhiều lợi ích.'></CustomCard>
                 </Grid>
             </Grid>
         </Paper>

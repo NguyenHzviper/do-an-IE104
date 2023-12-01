@@ -7,19 +7,32 @@ import Button from '@mui/material/Button';
 import Toolbar from '@mui/material/Toolbar';
 import { Container, IconButton } from '@mui/material';
 import { useState } from 'react';
-import { changeTheme } from '../../app/redux/themeSlice';
+import { changeTheme } from '../redux/themeSlice';
 import { useDispatch } from 'react-redux';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import { useSelector } from 'react-redux';
 import { selectTheme } from '@/app/redux/themeSlice';
+import LoginDialog from './login_dialog';
 
-type Props = {}
-const pages = ['Home', 'About', 'Services', 'Reviews', 'Support'];
+type Props = {
+
+}
+const pages = ['Trang chủ', 'Giới thiệu', 'Dịch vụ', 'Đánh giá', 'Hỗ trợ'];
 
 const Navbar = (props: Props) => {
     const dispatch = useDispatch()
     const theme = useSelector(selectTheme)
+    const [open, setOpen] = useState(false);
+
+
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
 
     function handelChangeTheme() {
 
@@ -39,7 +52,7 @@ const Navbar = (props: Props) => {
             <Container maxWidth="xl">
                 <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
                     <Typography variant='h5' sx={{ ml: 2, textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)', color: 'red', fontWeight: 'bold' }}>
-                        <span style={{ color: 'yellow' }}>Group </span>1
+                        <span style={{ color: 'yellow' }}>Nhóm </span>1
                     </Typography>
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (
@@ -56,11 +69,15 @@ const Navbar = (props: Props) => {
                         <IconButton onClick={handelChangeTheme}>
                             {theme ? <DarkModeIcon /> : <LightModeIcon />}
                         </IconButton>
-                        <Button sx={{ color: 'black', mx: '25px' }}>Sign in</Button>
-                        <Button variant='contained' sx={{ color: 'white', px: '30px', py: '20px', backgroundColor: '#060640' }}>Free trail</Button>
+                        <Button onClick={handleClickOpen} sx={{ color: 'black', mx: '25px' }}>Đăng nhập</Button>
+                        <Button variant='contained' sx={{ color: 'white', px: '30px', py: '20px', backgroundColor: '#060640' }}>Đăng ký dùng thử</Button>
                     </Box>
                 </Toolbar>
             </Container>
+            <LoginDialog
+                open={open}
+                onClose={handleClose}
+            />
         </AppBar>
     );
 }
