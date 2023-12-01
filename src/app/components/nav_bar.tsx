@@ -52,7 +52,7 @@ const Navbar = (props: Props) => {
             <Container maxWidth="xl">
                 <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
                     <Typography variant='h5' sx={{ ml: 2, textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)', color: 'red', fontWeight: 'bold' }}>
-                        <span style={{ color: 'yellow' }}>Nhóm </span>1
+                        <span style={{ color: 'yellow' }}>Ad</span>Vista
                     </Typography>
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (

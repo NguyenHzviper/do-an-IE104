@@ -148,7 +148,7 @@ export default function HomePage() {
           <Grid container spacing={3}>
             <Grid item xs={3}>
               <Typography variant='h3' sx={{ textAlign: 'start' }}>Nhóm 1</Typography>
-              <Typography variant='body2' sx={{ textAlign: "start", my: 2 }}>Điều này là một vấn đề quan trọng và theo tôi, <br />nó được xem là một trong những điều quan trọng nhất đối với một doanh nghiệp.</Typography>
+              <Typography variant='body2' sx={{ textAlign: "start", my: 2 }}>Điều này là một vấn đề quan trọng và theo tôi, nó được xem là một trong những điều quan trọng nhất đối với một doanh nghiệp.</Typography>
               <IconButton>
                 <FacebookIcon />
               </IconButton>
@@ -192,8 +192,8 @@ export default function HomePage() {
             alignItems="center"
             spacing={2}
           >
-            <Typography variant='body2' sx={{ color: 'white' }}>© 2023 Group 1. All rights reserved.</Typography>
-            <Typography variant='body2' sx={{ color: 'white' }}>Thiết kế bởi Nhóm 1</Typography>
+            <Typography variant='body2' sx={{ color: 'white' }}>© 2023 AdVista. All rights reserved.</Typography>
+            <Typography variant='body2' sx={{ color: 'white' }}>Thiết kế bởi AdVista</Typography>
           </Stack>
 
         </Box>
