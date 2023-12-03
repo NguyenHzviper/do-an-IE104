@@ -147,7 +147,7 @@ export default function HomePage() {
         <Paper square sx={{ p: 10 }}>
           <Grid container spacing={3}>
             <Grid item xs={3}>
-              <Typography variant='h3' sx={{ textAlign: 'start' }}>Nhóm 1</Typography>
+              <Typography variant='h3' sx={{ textAlign: 'start' }}>AdVista</Typography>
               <Typography variant='body2' sx={{ textAlign: "start", my: 2 }}>Điều này là một vấn đề quan trọng và theo tôi, nó được xem là một trong những điều quan trọng nhất đối với một doanh nghiệp.</Typography>
               <IconButton>
                 <FacebookIcon />
